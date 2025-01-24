@@ -16,10 +16,6 @@
 *.dylib
 *.dll
 
-# Fortran module files
-*.mod
-*.smod
-
 # Compiled Static libraries
 *.lai
 *.la
@@ -30,11 +26,14 @@
 *.exe
 *.out
 *.app
+*.bin
 
 # Build directories
 build/
 bin/
 lib/
+obj/
+dist/
 
 # IDE specific files
 .vscode/
@@ -56,18 +55,21 @@ CMakeCache.txt
 CMakeFiles/
 cmake_install.cmake
 Makefile
+*.cmake
 
 # Dependency directories
 vcpkg_installed/
 
 # Backup files
 *.bak
+*.backup
 
 # Debug files
 *.dSYM/
 *.su
 *.idb
 *.pdb
+*.ilk
 
 # Kernel Module Compile Results
 *.mod*
@@ -77,3 +79,37 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Temporary files
+*.tmp
+*.temp
+
+# C++ specific files
+# Template instantiation files
+*.ii
+*.s
+*.ii
+*.inst
+
+# Python compiled files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+
+# Python virtual environment
+venv/
+ENV/
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
