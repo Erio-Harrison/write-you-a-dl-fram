@@ -1,5 +1,11 @@
 # Write you a deep learning framework
 
+Refer to:
+
+https://github.com/zjhellofss/KuiperInfer
+
+https://github.com/bluealert/MetaNN-book
+
 # Still working
 
 ```bash
