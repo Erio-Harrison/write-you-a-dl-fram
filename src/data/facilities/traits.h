@@ -1,6 +1,6 @@
 #pragma once
-#include <data/tags.h>
 #include <type_traits>
+#include "tags.h"
 
 template <typename TElem, typename TDevice> class Matrix;
 template <typename TElem, typename TDevice> class Scalar;
