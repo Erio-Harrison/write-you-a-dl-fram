@@ -63,6 +63,9 @@ constexpr bool IsMatrix<T&> = IsMatrix<T>;
 template <typename T>
 constexpr bool IsMatrix<T&&> = IsMatrix<T>;
 
+template <typename TElement, typename TDevice>
+constexpr bool IsMatrix<Matrix<TElement, TDevice>> = true;
+
 /// is batch scalar
 template <typename T>
 constexpr bool IsBatchScalar = false;
