@@ -50,6 +50,10 @@ constexpr bool IsScalar<T&> = IsScalar<T>;
 template <typename T>
 constexpr bool IsScalar<T&&> = IsScalar<T>;
 
+template <typename TElem, typename TDevice>
+constexpr bool IsScalar<Scalar<TElem, TDevice>> = true;
+
+
 /// is matrix
 template <typename T>
 constexpr bool IsMatrix = false;
@@ -63,8 +67,8 @@ constexpr bool IsMatrix<T&> = IsMatrix<T>;
 template <typename T>
 constexpr bool IsMatrix<T&&> = IsMatrix<T>;
 
-template <typename TElement, typename TDevice>
-constexpr bool IsMatrix<Matrix<TElement, TDevice>> = true;
+template <typename TElem, typename TDevice>
+constexpr bool IsMatrix<Matrix<TElem, TDevice>> = true;
 
 /// is batch scalar
 template <typename T>
@@ -85,6 +89,9 @@ constexpr bool IsBatchScalar<T&&> = IsBatchScalar<T>;
 template <typename T>
 constexpr bool IsBatchScalar<const T&&> = IsBatchScalar<T>;
 
+template <typename TElem, typename TDevice>
+constexpr bool IsBatchScalar<Batch<TElem, TDevice, CategoryTags::Scalar>> = true;
+
 /// is batch matrix
 template <typename T>
 constexpr bool IsBatchMatrix = false;
@@ -103,6 +110,9 @@ constexpr bool IsBatchMatrix<T&&> = IsBatchMatrix<T>;
 
 template <typename T>
 constexpr bool IsBatchMatrix<const T&&> = IsBatchMatrix<T>;
+
+template <typename TElem, typename TDevice>
+constexpr bool IsBatchMatrix<Batch<TElem, TDevice, CategoryTags::Matrix>> = true;
 
 template <typename T>
 struct DataCategory_
