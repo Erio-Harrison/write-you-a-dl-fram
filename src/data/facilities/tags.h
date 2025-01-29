@@ -13,4 +13,5 @@ struct CategoryTags
 struct DeviceTags
 {
     struct CPU;
+    struct GPU;
 };
